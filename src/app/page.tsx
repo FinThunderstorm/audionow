@@ -41,7 +41,6 @@ const FavouritePodcast = (podcast: Podcast) => (
       <span className="text-xl font-bold text-shadow-sm">{podcast.name}</span>
       <span className="text-sm text-shadow-sm">{podcast.author}</span>
     </div>
-    <ArrowRightIcon className="w-6 h-6 mx-2" />
   </div>
 )
 
