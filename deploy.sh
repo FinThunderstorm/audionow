@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -o errexit -o nounset -o pipefail
 
-readonly infra_dir="$repository/infra"
 readonly ENV="prod"
 
 source "$( dirname "${BASH_SOURCE[0]}" )/scripts/common.sh"
@@ -12,7 +11,7 @@ function main {
   get_environment_variables
 
   echo ::group::Initialize OpenTofu
-  pushd "$infra_dir"
+  pushd "$repository/infra"
   tofu init -input=false
   popd
   echo ::endgroup::
@@ -23,7 +22,7 @@ function main {
   echo ::endgroup::
 
   echo ::group::Deploy the application
-  pushd "$infra_dir"
+  pushd "$repository/infra"
   tofu apply -input=false -auto-approve
   popd
   echo ::endgroup::
