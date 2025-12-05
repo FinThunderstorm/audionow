@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -o errexit -o nounset -o pipefail
 
-readonly repository="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 readonly infra_dir="$repository/infra"
 readonly ENV="prod"
 
-source "$repository/scripts/common.sh"
+source "$( dirname "${BASH_SOURCE[0]}" )/scripts/common.sh"
 
 function main {
   required_command tofu
