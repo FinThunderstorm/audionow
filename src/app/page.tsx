@@ -1,8 +1,4 @@
-import {
-  ArrowRightIcon,
-  Bars3Icon,
-  UserCircleIcon,
-} from "@heroicons/react/24/outline"
+import { Bars3Icon, UserCircleIcon } from "@heroicons/react/24/outline"
 import { PropsWithChildren } from "react"
 
 type Podcast = {
@@ -86,7 +82,7 @@ const GridSection = ({
 }: PropsWithChildren<{ text: string }>) => (
   <section className="flex flex-col gap-0.5">
     <SectionHeader text={text} />
-    <div className="grid grid-cols-2 gap-2 px-2 md:grid-cols-4 lg:grid-cols-6">
+    <div className="grid grid-cols-2 gap-2 px-2 md:grid-cols-3 lg:grid-cols-6">
       {children}
     </div>
   </section>
