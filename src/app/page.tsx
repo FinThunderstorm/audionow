@@ -47,9 +47,9 @@ const Item = (item: Item) => (
     style={{ backgroundImage: `url("${item.image}")` }}
   >
     <div className="flex flex-row justify-between items-center gap-0 backdrop-blur-lg p-2">
-      <span className="text-xl font-bold text-shadow-sm text-gray-600">
+      <h3 className="text-xl font-bold text-shadow-sm text-gray-600">
         {item.name}
-      </span>
+      </h3>
       <span className="text-sm text-shadow-sm text-gray-600">
         {new Intl.NumberFormat("fi-FI", {
           style: "currency",
@@ -61,9 +61,9 @@ const Item = (item: Item) => (
 )
 
 const SectionHeader = ({ text }: { text: string }) => (
-  <span className="bg-linear-to-r from-yellow-400 to-pink-700 bg-clip-text font-mono text-xl font-extrabold lowercase text-transparent px-2 pb-2 pt-0 w-auto">
+  <h2 className="bg-linear-to-r from-yellow-400 to-pink-700 bg-clip-text font-mono text-xl font-extrabold lowercase text-transparent px-2 pb-2 pt-0 w-auto">
     {text}
-  </span>
+  </h2>
 )
 
 const ScrollSection = ({
@@ -162,9 +162,9 @@ const Page = () => {
     <>
       <header className="py-4 flex flex-row justify-between items-center">
         <Bars3Icon className="w-8 h-8 mx-2" />
-        <span className="bg-linear-to-r to-yellow-400 from-pink-700 bg-clip-text font-mono text-4xl font-extrabold lowercase text-transparent w-auto">
+        <h1 className="bg-linear-to-r to-yellow-400 from-pink-700 bg-clip-text font-mono text-4xl font-extrabold lowercase text-transparent w-auto">
           AudioNow
-        </span>
+        </h1>
         <UserCircleIcon className="w-8 h-8 mx-2" />
       </header>
       <main className="flex flex-col gap-4">
